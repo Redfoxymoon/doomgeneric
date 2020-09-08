@@ -25,7 +25,7 @@
 // Outside Windows, we use strings.h for str[n]casecmp.
 
 
-#ifdef _WIN32
+#if defined(_WIN32) && !defined(__midipix__)
 
 #define strcasecmp _stricmp
 #define strncasecmp _strnicmp
@@ -83,7 +83,7 @@ typedef uint8_t byte;
 
 #include <limits.h>
 
-#ifdef _WIN32
+#if defined(_WIN32) && !defined(__midipix__)
 
 #define DIR_SEPARATOR '\\'
 #define DIR_SEPARATOR_S "\\"

@@ -2,11 +2,14 @@
 
 #include "doomgeneric.h"
 
+#include <stdlib.h>
 #include <stdio.h>
+#include <ctype.h>
+#include <string.h>
 
-#include <Windows.h>
+#include <windows.h>
 
-static BITMAPINFO s_Bmi = { sizeof(BITMAPINFOHEADER), DOOMGENERIC_RESX, -DOOMGENERIC_RESY, 1, 32 };
+static BITMAPINFO s_Bmi = {{ sizeof(BITMAPINFOHEADER), DOOMGENERIC_RESX, -DOOMGENERIC_RESY, 1, 32 }};
 static HWND s_Hwnd = 0;
 static HDC s_Hdc = 0;
 

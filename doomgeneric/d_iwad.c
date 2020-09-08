@@ -75,7 +75,7 @@ static void AddIWADDir(char *dir)
 // keys installed by the Windows installers for various CD versions
 // of Doom.  From these keys we can deduce where to find an IWAD.
 
-#if defined(_WIN32) && !defined(_WIN32_WCE)
+#if defined(_WIN32) && !defined(_WIN32_WCE) && !defined(__midipix__) /* midipix could probably use these paths, but our winapi support is (currently) too limited */
 
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
